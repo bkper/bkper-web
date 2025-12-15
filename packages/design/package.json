@@ -1,0 +1,23 @@
+{
+  "name": "@bkper-web/design",
+  "version": "2.0.0",
+  "description": "Bkper design system - CSS variables, tokens, and themes",
+  "author": "Bkper",
+  "license": "Apache-2.0",
+  "main": "src/bkper.css",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bkper/bkper-web.git",
+    "directory": "packages/design"
+  },
+  "keywords": [
+    "bkper",
+    "design-system",
+    "css",
+    "tokens",
+    "themes"
+  ]
+}
