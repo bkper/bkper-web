@@ -1,0 +1,15 @@
+{
+  "name": "bkper-web",
+  "version": "0.0.0",
+  "description": "Web tooling and SDKs for building applications on Bkper",
+  "private": true,
+  "author": "Bkper Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bkper/bkper-web.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
