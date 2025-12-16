@@ -1,6 +1,10 @@
 # @bkper/web-design
 
-Bkper design system - CSS variables, tokens, and themes.
+Bkper's design system - CSS variables, tokens, and themes.
+
+## Documentation
+
+* [Developer Docs](https://bkper.com/docs/) is coming soon as part of the Bkper web packages documentation site.
 
 ## Installation
 
@@ -23,7 +27,8 @@ Or import in your build system:
 ## What's Included
 
 - CSS custom properties (variables)
-- Account type colors (blue, yellow, green, red) with light/dark theme support
+- Account type colors: blue (Assets), yellow (Liabilities), green (Incoming), red (Outgoing)
+- Light/dark theme support
 - Typography scale
 - Spacing scale
 - Border and color tokens
