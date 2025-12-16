@@ -6,8 +6,16 @@
   "license": "Apache-2.0",
   "main": "src/bkper.css",
   "files": [
-    "src"
+    "src",
+    "LICENSE"
   ],
+  "scripts": {
+    "prepublishOnly": "cp ../../LICENSE .",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "postversion": "git push --follow-tags && npm publish --access public && echo \"✅ Successfully released version $npm_package_version!\""
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bkper/bkper-web.git",
