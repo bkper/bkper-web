@@ -20,7 +20,7 @@
   --bkper-border-radius: var(--wa-border-radius-m, 0.375rem);
 
   /* Color */
-  --bkper-background-color: var(--wa-color-surface-default, #ffffff);
+  --bkper-background-color: var(--wa-color-surface-default, #fff);
 
   --bkper-link-color: var(--wa-color-text-link, #3b82f6);
 
@@ -49,7 +49,7 @@
 .wa-light {
 
   --bkper-color-grey-low: #f5f5f5;
-  --bkper-color-grey-medium: #cccccc;
+  --bkper-color-grey-medium: #ccc;
   --bkper-color-grey-high: #3A3A3A;
 
   --bkper-color-blue-low: #dfedf6;

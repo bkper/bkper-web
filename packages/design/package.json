@@ -10,7 +10,10 @@
     "LICENSE"
   ],
   "scripts": {
+    "lint": "stylelint 'src/**/*.css'",
+    "lint:fix": "stylelint 'src/**/*.css' --fix",
     "prepublishOnly": "cp ../../LICENSE .",
+    "preversion": "bun run lint",
     "patch": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version major",
@@ -27,5 +30,9 @@
     "css",
     "tokens",
     "themes"
-  ]
+  ],
+  "devDependencies": {
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1"
+  }
 }
