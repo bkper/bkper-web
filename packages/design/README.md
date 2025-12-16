@@ -1,23 +1,23 @@
-# @bkper-web/design
+# @bkper/web-design
 
 Bkper design system - CSS variables, tokens, and themes.
 
 ## Installation
 
 ```bash
-npm install @bkper-web/design
+npm install @bkper/web-design
 ```
 
 ## Usage
 
 ```html
-<link rel="stylesheet" href="node_modules/@bkper-web/design/src/bkper.css">
+<link rel="stylesheet" href="node_modules/@bkper/web-design/src/bkper.css">
 ```
 
 Or import in your build system:
 
 ```css
-@import '@bkper-web/design/src/bkper.css';
+@import '@bkper/web-design/src/bkper.css';
 ```
 
 ## What's Included

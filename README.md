@@ -6,12 +6,11 @@ Web tooling and SDKs for building applications on Bkper.
 
 This monorepo will contain the following packages:
 
-- **@bkper-web/design** - CSS design system (variables, tokens, themes)
-- **@bkper-web/core** - Framework-agnostic core utilities
-- **@bkper-web/auth** - Authentication SDK for Bkper API
-- **@bkper-web/components** - Lit web components _(future)_
+- **@bkper/web-design** - CSS design system (variables, tokens, themes)
+- **@bkper/web-auth** - Framework-agnostic authentication SDK
+- **@bkper/web-components** - Lit web components
 
-_Packages are currently being developed and will be published to npm as they become available._
+The monorepo will also include an internal `/shared` package for utilities used by published packages (not published to npm).
 
 ## About Bkper
 
