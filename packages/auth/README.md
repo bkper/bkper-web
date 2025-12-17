@@ -51,7 +51,7 @@ if (token) {
 
 - Framework-agnostic OAuth authentication SDK for Bkper API
 - Callback-based API for authentication events
-- OAuth flow with cookie-based session persistence
+- OAuth flow with in-memory token management
 - Token refresh mechanism with automatic retry
 - TypeScript support with full type definitions
 

@@ -1,8 +1,6 @@
-import Cookies from 'js-cookie';
 import { BkperAuthConfig } from './types';
 
 const DEFAULT_BASE_URL = 'https://bkper.app';
-const ALREADY_LOGGED_COOKIE = 'already-logged';
 
 export class BkperAuth {
 
@@ -57,26 +55,6 @@ export class BkperAuth {
      */
     getAccessToken(): string | undefined {
         return this.accessToken;
-    }
-
-    /**
-     * Checks if the user has previously logged in (based on cookie presence).
-     *
-     * @returns true if a login cookie exists, false otherwise
-     *
-     * @example
-     * ```typescript
-     * if (auth.hasLoggedInBefore()) {
-     *   // User has logged in before, attempt to refresh token
-     *   await auth.init();
-     * } else {
-     *   // First time user, show login UI
-     *   showWelcomeScreen();
-     * }
-     * ```
-     */
-    hasLoggedInBefore(): boolean {
-        return Cookies.get(ALREADY_LOGGED_COOKIE) != null;
     }
 
     /**
@@ -173,7 +151,6 @@ export class BkperAuth {
                             return Promise.reject(new Error('Invalid auth response: missing or invalid accessToken'));
                         }
                         this.accessToken = data.accessToken;
-                        Cookies.set(ALREADY_LOGGED_COOKIE, 'true');
                         if (this.config.onTokenRefresh && this.accessToken) {
                             this.config.onTokenRefresh(this.accessToken);
                         }

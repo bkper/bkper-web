@@ -7,6 +7,6 @@ This package extracts and formalizes the authentication logic previously embedde
 - Initial npm publication of Bkper's authentication SDK
 - Framework-agnostic design
 - Callback-based API for authentication events
-- OAuth flow with cookie-based session persistence
+- OAuth flow with in-memory token management
 - Token refresh mechanism with automatic retry
 - TypeScript support with full type definitions

@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import Cookies from 'js-cookie';
 import { BkperAuth } from '../src/bkper-auth';
 
 describe('BkperAuth', () => {
@@ -7,8 +6,6 @@ describe('BkperAuth', () => {
     beforeEach(() => {
         vi.clearAllMocks();
         (globalThis.fetch as any).mockReset();
-        (Cookies.get as any).mockReset();
-        (Cookies.set as any).mockReset();
     });
 
     describe('constructor', () => {
@@ -34,22 +31,6 @@ describe('BkperAuth', () => {
 
     });
 
-    describe('hasLoggedInBefore()', () => {
-
-        it('should return true when cookie exists', () => {
-            (Cookies.get as any).mockReturnValue('true');
-            const auth = new BkperAuth();
-            expect(auth.hasLoggedInBefore()).toBe(true);
-        });
-
-        it('should return false when cookie does not exist', () => {
-            (Cookies.get as any).mockReturnValue(undefined);
-            const auth = new BkperAuth();
-            expect(auth.hasLoggedInBefore()).toBe(false);
-        });
-
-    });
-
     describe('refresh()', () => {
 
         it('should set token and call onTokenRefresh on 200 response', async () => {
@@ -66,7 +47,6 @@ describe('BkperAuth', () => {
 
             expect(auth.getAccessToken()).toBe('test-token-123');
             expect(onTokenRefresh).toHaveBeenCalledWith('test-token-123');
-            expect(Cookies.set).toHaveBeenCalledWith('already-logged', 'true');
         });
 
         it('should clear token on 401 response', async () => {
