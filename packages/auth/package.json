@@ -18,7 +18,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "prepublishOnly": "bun run build && bun run test"
+    "prepublishOnly": "cp ../../LICENSE . && bun run build && bun run test",
+    "preversion": "bun run test",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "postversion": "git push --follow-tags && npm publish --access public && echo \"✅ Successfully released version $npm_package_version!\""
   },
   "repository": {
     "type": "git",
