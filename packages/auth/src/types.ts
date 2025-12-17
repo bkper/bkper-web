@@ -49,7 +49,7 @@ export interface BkperAuthConfig {
      *
      * @param error - The error that occurred
      */
-    onError?: (error: Error) => void;
+    onError?: (error: unknown) => void;
 
     /**
      * Provide additional parameters to send to the authentication service.

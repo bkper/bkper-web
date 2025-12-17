@@ -99,22 +99,19 @@ export class BkperAuth {
         try {
             await this.refresh();
             this.checkAccessToken();
-        } catch (error) {
-            // TODO: Phase 3 - Replace with onError callback
+        } catch (error: unknown) {
             if (this.config.onError) {
-                this.config.onError(error as Error);
+                this.config.onError(error);
             }
         }
     }
 
     private checkAccessToken(): void {
         if (this.accessToken) {
-            // TODO: Phase 3 - Replace with onLoginSuccess callback
             if (this.config.onLoginSuccess) {
                 this.config.onLoginSuccess();
             }
         } else {
-            // TODO: Phase 3 - Replace with onLoginRequired callback
             if (this.config.onLoginRequired) {
                 this.config.onLoginRequired();
             }
@@ -171,9 +168,12 @@ export class BkperAuth {
             .then(response => {
                 if (response.status === 200) {
                     return response.json().then(data => {
+                        // Validate response shape
+                        if (!data || typeof data.accessToken !== 'string' || !data.accessToken) {
+                            return Promise.reject(new Error('Invalid auth response: missing or invalid accessToken'));
+                        }
                         this.accessToken = data.accessToken;
                         Cookies.set(ALREADY_LOGGED_COOKIE, 'true');
-                        // TODO: Phase 3 - Replace with onTokenRefresh callback
                         if (this.config.onTokenRefresh && this.accessToken) {
                             this.config.onTokenRefresh(this.accessToken);
                         }
@@ -188,6 +188,9 @@ export class BkperAuth {
             })
             .catch((error) => {
                 this.accessToken = undefined;
+                if (this.config.onError) {
+                    this.config.onError(error);
+                }
                 return Promise.reject(error);
             });
     }
