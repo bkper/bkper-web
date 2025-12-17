@@ -4,7 +4,7 @@ Framework-agnostic OAuth authentication SDK for Bkper API.
 
 ## Documentation
 
-* [Developer Docs](https://bkper.com/docs/) is coming soon as part of the Bkper web packages documentation site.
+* [Developer Docs](https://bkper.com/docs/)
 
 ## Installation
 
@@ -54,6 +54,40 @@ if (token) {
 - OAuth flow with in-memory token management
 - Token refresh mechanism with automatic retry
 - TypeScript support with full type definitions
+
+## API Reference
+
+### BkperAuth
+
+The main authentication client class.
+
+#### Constructor
+
+```typescript
+new BkperAuth(config?: BkperAuthConfig)
+```
+
+#### Methods
+
+- **`init(): Promise<void>`** - Initialize auth state by attempting to refresh the token. Call on app load.
+- **`login(): void`** - Request the start of the login flow.
+- **`refresh(): Promise<void>`** - Refresh the access token. Call to renew authentication silently.
+- **`logout(): void`** - Request the start of the logout flow.
+- **`getAccessToken(): string | undefined`** - Get the current access token.
+
+### BkperAuthConfig
+
+Configuration options for the auth client.
+
+#### Properties
+
+- **`baseUrl?: string`** - Override the authentication service URL (for testing/development).
+- **`onLoginSuccess?: () => void`** - Called when login succeeds.
+- **`onLoginRequired?: () => void`** - Called when login is required.
+- **`onLogout?: () => void`** - Called when user logs out.
+- **`onTokenRefresh?: (token: string) => void`** - Called when token is refreshed.
+- **`onError?: (error: unknown) => void`** - Called when an auth error occurs.
+- **`getAdditionalAuthParams?: () => Record<string, string>`** - Provide additional parameters for auth requests.
 
 ## License
 
