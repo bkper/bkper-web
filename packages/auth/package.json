@@ -11,6 +11,13 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
     "dist",
     "LICENSE",
@@ -33,7 +40,7 @@
   "homepage": "https://bkper.com/docs/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bkper/bkper-web.git",
+    "url": "git+https://github.com/bkper/bkper-web.git",
     "directory": "packages/auth"
   },
   "bugs": {

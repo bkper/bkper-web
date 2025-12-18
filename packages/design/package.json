@@ -9,6 +9,9 @@
   "license": "Apache-2.0",
   "main": "src/bkper.css",
   "style": "src/bkper.css",
+  "exports": {
+    ".": "./src/bkper.css"
+  },
   "files": [
     "src",
     "LICENSE",
@@ -27,7 +30,7 @@
   "homepage": "https://bkper.com/docs/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bkper/bkper-web.git",
+    "url": "git+https://github.com/bkper/bkper-web.git",
     "directory": "packages/design"
   },
   "bugs": {
