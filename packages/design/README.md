@@ -16,15 +16,25 @@ npm install @bkper/web-design
 
 ## Usage
 
+Import in your build system:
+
+```css
+@import '@bkper/web-design';
+```
+
+Or link directly in HTML:
+
 ```html
 <link rel="stylesheet" href="node_modules/@bkper/web-design/src/bkper.css">
 ```
 
-Or import in your build system:
+Alternatively, skip installation and link directly to a stable hosted version:
 
-```css
-@import '@bkper/web-design/src/bkper.css';
+```html
+<link rel="stylesheet" href="https://bkper.app/design/v2/style.css">
 ```
+
+Note: The CDN serves the latest stable version, which may not be the most recent npm release.
 
 ## What's Included
 
