@@ -4,7 +4,7 @@ Bkper's design system - CSS variables, tokens, and themes.
 
 ## Documentation
 
-* [Developer Docs](https://bkper.com/docs/) is coming soon as part of the Bkper web packages documentation site.
+* [Developer Docs](https://bkper.com/docs/)
 
 ## Installation
 
