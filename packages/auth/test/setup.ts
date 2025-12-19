@@ -1,13 +1,5 @@
 import { vi } from 'vitest';
 
-// Mock js-cookie
-vi.mock('js-cookie', () => ({
-    default: {
-        get: vi.fn(),
-        set: vi.fn(),
-    },
-}));
-
 // Mock self.location
 globalThis.self = {
     location: {
