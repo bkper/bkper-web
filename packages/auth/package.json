@@ -24,7 +24,7 @@
     "README.md"
   ],
   "scripts": {
-    "clean": "rm -rf ./node_modules & rm -rf ./dist & wait",
+    "clean": "rm -rf ./node_modules ./dist",
     "prebuild": "bun install",
     "build": "tsc",
     "dev": "tsc -w",
