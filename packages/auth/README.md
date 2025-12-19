@@ -26,9 +26,6 @@ const auth = new BkperAuth({
   onLoginRequired: () => {
     console.log('Please sign in');
     showLoginButton();
-  },
-  onError: (error) => {
-    console.error('Auth error:', error);
   }
 });
 
@@ -54,6 +51,25 @@ if (token) {
 - OAuth flow with in-memory token management
 - Token refresh mechanism with automatic retry
 - TypeScript support with full type definitions
+
+## TypeScript Support
+
+This package is written in TypeScript and provides full type definitions out of the box. All public APIs are fully typed, including callbacks and configuration options.
+
+```typescript
+import { BkperAuth, BkperAuthConfig } from '@bkper/web-auth';
+
+const config: BkperAuthConfig = {
+  onLoginSuccess: () => console.log('Authenticated'),
+  onError: (error) => console.error('Auth error:', error)
+};
+
+const auth = new BkperAuth(config);
+```
+
+## Browser Compatibility
+
+This package requires modern web browsers with native [`fetch` API support](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API#browser_compatibility). It uses standard web APIs and works in any JavaScript environment that supports modern browser features.
 
 ## API Reference
 
