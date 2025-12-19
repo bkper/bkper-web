@@ -2,6 +2,8 @@
 
 Framework-agnostic OAuth authentication SDK for Bkper API.
 
+[![npm](https://img.shields.io/npm/v/@bkper/web-auth?color=%235889e4)](https://www.npmjs.com/package/@bkper/web-auth)
+
 ## Documentation
 
 * [Developer Docs](https://bkper.com/docs/)
