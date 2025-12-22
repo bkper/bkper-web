@@ -22,10 +22,10 @@
     "lint:fix": "stylelint 'src/**/*.css' --fix",
     "prepublishOnly": "cp ../../LICENSE .",
     "preversion": "bun run lint",
-    "patch": "npm version patch",
-    "minor": "npm version minor",
-    "major": "npm version major",
-    "postversion": "git push --follow-tags && npm publish --access public && echo \"✅ Successfully released version $npm_package_version!\""
+    "patch": "npm version patch --git-tag-version=false",
+    "minor": "npm version minor --git-tag-version=false",
+    "major": "npm version major --git-tag-version=false",
+    "postversion": "../../scripts/release.sh design $npm_package_version"
   },
   "homepage": "https://bkper.com/docs/",
   "repository": {
