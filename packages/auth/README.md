@@ -7,6 +7,7 @@ Framework-agnostic OAuth authentication SDK for Bkper API.
 ## Documentation
 
 * [Developer Docs](https://bkper.com/docs/)
+* [API Reference](https://bkper.com/docs/auth-sdk)
 
 ## Installation
 
