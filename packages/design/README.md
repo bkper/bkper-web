@@ -28,13 +28,13 @@ Or link directly in HTML:
 <link rel="stylesheet" href="node_modules/@bkper/web-design/src/bkper.css">
 ```
 
-Alternatively, skip installation and link directly to a stable hosted version:
+Alternatively, skip installation and link directly to a hosted version (CDN):
 
 ```html
 <link rel="stylesheet" href="https://bkper.app/design/v2/style.css">
 ```
 
-Note: The CDN serves the latest stable version, which may not be the most recent npm release.
+Note: The CDN serves the most recent npm release.
 
 ## What's Included
 
