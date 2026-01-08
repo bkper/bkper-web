@@ -1,0 +1,33 @@
+/**
+ * Cloudflare Workers configuration for Bkper Design Worker
+ * Reference: https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bkper-design",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-01-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+
+  // Note: account_id is provided via GitHub Action secrets (CLOUDFLARE_ACCOUNT_ID)
+  // For local development, use: wrangler login
+
+  // Configure CSS files to be imported as text
+  "rules": [
+    {
+      "type": "Text",
+      "globs": [
+        "**/*.css"
+      ],
+      "fallthrough": true
+    }
+  ],
+
+  // Local development server
+  "dev": {
+    "port": 8785
+  }
+}

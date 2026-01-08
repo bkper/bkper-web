@@ -44,8 +44,13 @@
     "tokens",
     "themes"
   ],
+  "dependencies": {
+    "hono": "^4.9.5"
+  },
   "devDependencies": {
     "stylelint": "^16.26.1",
-    "stylelint-config-standard": "^39.0.1"
+    "stylelint-config-standard": "^39.0.1",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.38.0"
   }
 }

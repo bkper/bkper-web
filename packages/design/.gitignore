@@ -1,2 +1,8 @@
 # License file copied from monorepo root during publish
 LICENSE
+
+# Worker artifacts
+node_modules/
+dist/
+.wrangler/
+worker-configuration.d.ts
