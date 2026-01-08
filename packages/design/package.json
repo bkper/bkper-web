@@ -18,8 +18,16 @@
     "README.md"
   ],
   "scripts": {
+    "clean": "rm -rf ./node_modules ./dist",
     "lint": "stylelint 'src/**/*.css'",
     "lint:fix": "stylelint 'src/**/*.css' --fix",
+    "prebuild": "bun install",
+    "build": "bun run build:tsc && bun run build:worker",
+    "build:tsc": "tsc --noEmit",
+    "build:worker": "wrangler deploy --dry-run --outdir dist",
+    "types": "wrangler types",
+    "predev": "bun install",
+    "dev": "wrangler dev",
     "prepublishOnly": "cp ../../LICENSE .",
     "preversion": "bun run lint",
     "patch": "npm version patch --git-tag-version=false",
